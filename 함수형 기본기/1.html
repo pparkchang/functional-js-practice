@@ -10,20 +10,38 @@
     <script>
       const log = console.log;
     </script>
+    <div>
+      # 평가
+      <p>- 코드가 계산(Evaluation) 되어 값을 만드는 것</p>
+    </div>
+  </br>
+    <div>
+      # 일급 객체
+      <p>- 값으로 다룰 수 있다.</p>
+      <p>- 변수에 담을 수 있다.</p>
+      <p>- 함수의 인자로 사용될 수 있다.</p>
+      <p>- 함수의 결과로 사용될 수 있다.</p>
+    </div>
     <script>
       const a = 10;
       const add10 = (a) => a + 10;
       const r = add10(a);
-      // log(r);
+      log(r);
     </script>
+  </br>
+    <div>
+      # 일급 함수
+      <p>- 함수를 값으로 다룰 수 있다.</p> 
+      <p>- 조합성과 추상화의 도구</p> 
+    </div>
     <script>
       const add5 = (a) => a + 5;
       log(add5);
       log(add5(5));
 
       const f1 = () => () => 1;
-      log(f1());
-
+      log(f1()());
+      // 여기서 주의하자 f1을 실행시켜도 () => value 라는 익명 함수가 남는다. 
       const f2 = f1();
       log(f2);
       log(f2());
